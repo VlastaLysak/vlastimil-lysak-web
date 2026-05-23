@@ -639,6 +639,7 @@ ul {
     order: -1;
     height: 50svh;
     justify-content: center;
+    padding-top: 60px;
   }
 
   .hero__img {
