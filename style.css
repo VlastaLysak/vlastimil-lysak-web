@@ -253,6 +253,21 @@ ul {
   letter-spacing: 0.03em;
 }
 
+/* Tlačítko v hero — stříbrné vyplněné, užší */
+.hero__text .btn--outline {
+  padding-inline: 0.5em;
+  background: var(--clr-silver);
+  color: #000;
+  border-color: var(--clr-silver);
+}
+
+.hero__text .btn--outline:hover,
+.hero__text .btn--outline:focus-visible {
+  background: var(--clr-hover);
+  border-color: var(--clr-hover);
+  color: #000;
+}
+
 /* Pravý sloupec — foto obsahuje celý snímek bez ořezu */
 .hero__photo-wrap {
   display: flex;
