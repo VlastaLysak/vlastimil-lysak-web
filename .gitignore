@@ -1,0 +1,18 @@
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS (kdyby projekt otevíral Mac)
+.DS_Store
+
+# Editory
+.vscode/
+*.suo
+*.user
+
+# Claude Code
+.claude/
+
+# Node (pro případ budoucího rozšíření)
+node_modules/
