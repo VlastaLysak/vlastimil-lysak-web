@@ -106,7 +106,7 @@ ul {
 /* ── Tlačítka — pouze stříbrný rámeček + text, hover = vyplnit ── */
 .btn {
   display: inline-block;
-  padding: 0.85em 2em;
+  padding: 0.85em 1em;
   border-radius: var(--radius-sm);
   font-size: 0.95rem;
   font-weight: 600;
@@ -300,7 +300,6 @@ ul {
   align-items: center;
   justify-content: center;
   min-height: 400px;
-  border: 1px solid var(--clr-border);
 }
 
 .filozofie__photo-wrap img {
@@ -467,8 +466,8 @@ ul {
 .vzdelani__photo-wrap {
   margin-top: 2.5rem;
   background: var(--clr-bg);
-  border: 1px solid var(--clr-border);
   border-radius: var(--radius);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -678,6 +677,17 @@ ul {
 
   .nav__toggle.nav__toggle--open span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+/* ── Desktop: logo skryto, navigační položky zarovnány doleva ── */
+@media (min-width: 601px) {
+  .nav__logo {
+    display: none;
+  }
+
+  .nav__inner {
+    justify-content: flex-start;
   }
 }
 
