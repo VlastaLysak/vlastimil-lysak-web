@@ -150,11 +150,11 @@ ul {
   transition: background var(--transition), backdrop-filter var(--transition);
 }
 
-/* Po scrollu: tmavší růžová s rozmazáním */
+/* Po scrollu: tmavší pevná růžová — backdrop-filter záměrně vypuštěn,
+   protože způsoboval, že fixed potomek (nav__links) ztratil referenci
+   na viewport a menu bylo neviditelné při srolování dolů */
 .nav.nav--scrolled {
-  background: rgba(236, 72, 153, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: #DB2777;
   border-bottom: 1px solid rgba(219, 39, 119, 0.40);
 }
 
