@@ -338,15 +338,13 @@ ul {
   background: var(--clr-accent);
 }
 
-/* Foto bez ořezu */
+/* Foto bez ořezu — bez rámečku */
 .o-mne__photo-wrap {
-  background: rgba(0, 0, 0, 0.12);
-  border-radius: var(--radius);
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 450px;
+  overflow: hidden;
 }
 
 .o-mne__photo-wrap img {
@@ -630,15 +628,13 @@ ul {
   background: var(--clr-accent);
 }
 
-/* Foto bez ořezu */
+/* Foto bez ořezu — bez rámečku */
 .vzdelani__photo-wrap {
-  background: rgba(0, 0, 0, 0.12);
-  border-radius: var(--radius);
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 400px;
+  overflow: hidden;
 }
 
 .vzdelani__photo-wrap img {
