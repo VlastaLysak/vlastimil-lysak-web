@@ -767,6 +767,14 @@ ul {
   }
 }
 
+/* Střední šířky (900–1050px): 4 karty jsou příliš těsné → 2×2 */
+@media (max-width: 1050px) {
+  .kontakt__karty {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 640px;
+  }
+}
+
 /* Mobil (768px) — hamburger menu */
 @media (max-width: 768px) {
   .nav__toggle {
@@ -842,6 +850,12 @@ ul {
 
   .vzdelani__kurzy {
     grid-template-columns: 1fr;
+  }
+
+  /* Kontakt: 1 sloupec na úzkých telefonech */
+  .kontakt__karty {
+    grid-template-columns: 1fr;
+    max-width: 380px;
   }
 
   /* Hero: foto nahoře, text pod ní */
