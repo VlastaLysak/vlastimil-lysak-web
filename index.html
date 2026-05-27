@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Vlastimil Lysák — osobní trenér, výživový poradce a běžecký instruktor v Brně. Tréninky šité na míru, výživa, regenerace." />
+  <meta name="description" content="Vlastimil Lysák — kondiční trenér, osobní trenér a běžecký trenér v Brně." />
   <title>Vlastimil Lysák — Osobní trenér Brno</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,8 +20,11 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__links" id="nav-links">
-        <li><a href="#filozofie">O mně</a></li>
-        <li><a href="#specializace">Specializace</a></li>
+        <li><a href="#o-mne">O mně</a></li>
+        <li><a href="#filozofie">Filozofie</a></li>
+        <li><a href="#sluzby">Služby</a></li>
+        <li><a href="#cenik">Ceník</a></li>
+        <li><a href="#praxe">Praxe</a></li>
         <li><a href="#vzdelani">Vzdělání</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
@@ -30,19 +33,15 @@
 
   <main>
 
-    <!-- ====== 1. HERO SEKCE ====== -->
+    <!-- ====== HERO ====== -->
     <!-- Dvousloupcové rozložení: text vlevo, foto vpravo -->
     <section class="hero" id="hero">
-
-      <!-- Levý sloupec: text a tlačítko -->
       <div class="hero__text">
-        <p class="hero__eyebrow">Fitness &amp; Running Coach</p>
         <h1 class="hero__name">Vlastimil Lysák</h1>
-        <p class="hero__subtitle">Osobní trenér&nbsp;&nbsp;·&nbsp;&nbsp;Výživový poradce&nbsp;&nbsp;·&nbsp;&nbsp;Brno</p>
+        <p class="hero__subtitle">Kondiční trenér | osobní trenér | běžecký trenér</p>
         <a href="#kontakt" class="btn btn--outline">Napište mi</a>
       </div>
-
-      <!-- Pravý sloupec: celý snímek bez ořezu (object-fit: contain) -->
+      <!-- Celý snímek bez ořezu (object-fit: contain) -->
       <div class="hero__photo-wrap">
         <img
           src="Hero.jpg"
@@ -52,27 +51,42 @@
           fetchpriority="high"
         />
       </div>
-
     </section>
 
-    <!-- ====== 2. FILOZOFIE – KALOKAGATHIA ====== -->
-    <section class="filozofie" id="filozofie">
-      <div class="container filozofie__inner">
-        <div class="filozofie__text">
+    <!-- ====== O MNĚ ====== -->
+    <section class="o-mne" id="o-mne">
+      <div class="container o-mne__inner">
+        <div class="o-mne__text">
           <span class="section-label">O mně</span>
-          <h2 class="section-title">Moje filozofie přístupu k tělu –<br><em>KALOKAGATHIA</em></h2>
-          <p>
-            Antické myšlení mě fascinovalo od doby, kdy jsem se dějiny učil na základní škole.
-            Chtěl bych, abychom uměli přemýšlet o krocích v aktivitách, které nás mají činit
-            šťastnými — aby nás bavily a dodaly nám potřebnou sebedůvěru. Své tělo není třeba
-            ničit, ale zlepšovat ho a dostávat dál. Jen netrénovat, ale i kvalitně regenerovat.
-            Duševní hygiena je důležitá pro náš rozvoj. Když si nebudete vědět rady, věřím,
-            že vám pomohu — anebo vás nasměruji správným směrem.
-          </p>
-          <a href="#specializace" class="btn btn--outline">Co pro Vás mohu udělat</a>
+          <h2 class="section-title">Vlastimil Lysák</h2>
+          <p class="o-mne__tagline">Kondiční trenér | osobní trenér | běžecký trenér</p>
+
+          <p>Sport a pohyb jsou součástí mého života mnoho let. Ve své práci propojuji kondiční
+          trénink, běh, sílu, regeneraci a zdravý přístup k tělu.</p>
+
+          <p>Mou filozofií je princip <strong>KALOKAGATHIA</strong> – antická myšlenka harmonie
+          těla a mysli. Už od školy mě fascinovala představa, že člověk může být nejen výkonný,
+          ale zároveň zdravý, spokojený a psychicky silný.</p>
+
+          <p>Nejde mi pouze o tvrdý trénink. Důležité je také:</p>
+          <ul class="o-mne__list">
+            <li>správné nastavení procesu</li>
+            <li>regenerace</li>
+            <li>duševní hygiena</li>
+            <li>dlouhodobý rozvoj</li>
+            <li>radost z pohybu</li>
+          </ul>
+
+          <p>Věřím, že pohyb má člověka posouvat dál — ne ničit.</p>
+
+          <p>Pracuji s hobby sportovci, běžci, výkonnostními atlety i lidmi, kteří chtějí lépe
+          fungovat v běžném životě. Každý člověk potřebuje individuální přístup a smysluplně
+          nastavený trénink.</p>
+
+          <p>Pokud si nebudete vědět rady, rád vám pomohu najít správný směr.</p>
         </div>
         <!-- Celý snímek bez ořezu -->
-        <div class="filozofie__photo-wrap">
+        <div class="o-mne__photo-wrap">
           <img
             src="2.jpg"
             alt="Vlastimil Lysák při tréninku"
@@ -82,11 +96,29 @@
       </div>
     </section>
 
-    <!-- ====== 3. SPECIALIZACE ====== -->
-    <section class="specializace" id="specializace">
+    <!-- ====== FILOZOFIE ====== -->
+    <section class="filozofie" id="filozofie">
+      <div class="container filozofie__inner">
+        <span class="section-label section-label--center">Filozofie</span>
+        <h2 class="section-title section-title--center">Moje filozofie</h2>
+        <blockquote class="filozofie__citat">„Kvalita nad chaosem."</blockquote>
+        <ul class="filozofie__hodnoty">
+          <li>správně nastavený trénink</li>
+          <li>dlouhodobý rozvoj</li>
+          <li>regenerace jako součást výkonu</li>
+          <li>síla a vytrvalost v rovnováze</li>
+          <li>zdravý pohyb</li>
+          <li>disciplína i radost</li>
+          <li>výkon bez zbytečného ničení těla</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====== SLUŽBY ====== -->
+    <section class="sluzby" id="sluzby">
       <div class="container">
         <span class="section-label section-label--center">Služby</span>
-        <h2 class="section-title section-title--center">Co pro Vás mohu udělat</h2>
+        <h2 class="section-title section-title--center">Služby</h2>
         <div class="karty">
 
           <article class="karta">
@@ -101,7 +133,7 @@
               </svg>
             </div>
             <h3>Osobní tréninky</h3>
-            <p>Ve fitness nebo na místě dle Vaší volby.</p>
+            <p>Silový a kondiční trénink ve fitness nebo venku dle vašich možností.</p>
           </article>
 
           <article class="karta">
@@ -114,8 +146,8 @@
                 <path d="M31 39l5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Běžecké a kondiční tréninky</h3>
-            <p>Osobní i skupinové.</p>
+            <h3>Běžecký coaching</h3>
+            <p>Individuální i skupinové běžecké tréninky, technika běhu, příprava na závody.</p>
           </article>
 
           <article class="karta">
@@ -127,8 +159,19 @@
                 <path d="M16 20h16M16 27h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Příprava na závody</h3>
-            <p>Individuální tréninkové plány pro běžce.</p>
+            <h3>Tréninkové plány</h3>
+            <p>Individuální plán podle vašich cílů, výkonnosti a časových možností.</p>
+          </article>
+
+          <article class="karta">
+            <div class="karta__icon">
+              <!-- Kondiční příprava — blesk -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M28 6L14 26h12l-6 16 20-22H28L34 6z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Kondiční příprava sportovců</h3>
+            <p>Rozvoj síly, rychlosti, stability a vytrvalosti.</p>
           </article>
 
           <article class="karta">
@@ -140,20 +183,20 @@
                 <path d="M16 20h16M16 28h16M16 36h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Zdravá záda a pevné břicho</h3>
-            <p>Individuální cvičení a stabilizační systém.</p>
+            <h3>Zdravá záda &amp; core</h3>
+            <p>Stabilizační systém, hluboký střed těla, mobilita a prevence bolesti.</p>
           </article>
 
           <article class="karta">
             <div class="karta__icon">
-              <!-- Strečink / postava -->
+              <!-- Regenerace / ruce -->
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="24" cy="8" r="3.5" stroke="currentColor" stroke-width="2.5"/>
-                <path d="M24 12v10l-10 8M24 22l10 8M18 38l6-8 6 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 22c0-2 2-4 4-4h12c2 0 4 2 4 4v8c0 6-4 12-10 12S14 36 14 30v-8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M19 18v-4a2 2 0 1 1 4 0v4M23 18v-6a2 2 0 1 1 4 0v6M27 19v-4a2 2 0 1 1 4 0v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Asistovaný strečink</h3>
-            <p>Vedený pasivní i dynamický strečink.</p>
+            <h3>Regenerace</h3>
+            <p>Asistovaný strečink, sportovní masáže, kinesiotaping.</p>
           </article>
 
           <article class="karta">
@@ -164,200 +207,123 @@
                 <path d="M24 12c-10 0-14 8-12 18 2 8 8 14 12 14s10-6 12-14c2-10-2-18-12-18z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
               </svg>
             </div>
-            <h3>Výživové poradenství</h3>
-            <p>Snižování hmotnosti, zdravé hubnutí.</p>
+            <h3>Výživa a suplementace</h3>
+            <p>Sportovní výživa, redukce hmotnosti, zdravé hubnutí a regenerace.</p>
           </article>
 
           <article class="karta">
             <div class="karta__icon">
-              <!-- Suplementy / lahvička -->
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="19" y="4" width="10" height="6" rx="2" stroke="currentColor" stroke-width="2.5"/>
-                <path d="M16 10h16l3 7v21a3 3 0 0 1-3 3H16a3 3 0 0 1-3-3V17l3-7z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-                <path d="M13 21h22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Sportovní výživa a suplementace</h3>
-            <p>Poradenství na míru.</p>
-          </article>
-
-          <article class="karta">
-            <div class="karta__icon">
-              <!-- Masáže / ruce -->
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M14 22c0-2 2-4 4-4h12c2 0 4 2 4 4v8c0 6-4 12-10 12S14 36 14 30v-8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-                <path d="M19 18v-4a2 2 0 1 1 4 0v4M23 18v-6a2 2 0 1 1 4 0v6M27 19v-4a2 2 0 1 1 4 0v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Masáže a tejping</h3>
-            <p>Sportovní masáže a kinesiotaping.</p>
-          </article>
-
-          <article class="karta">
-            <div class="karta__icon">
-              <!-- Firemní skupina -->
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="16" cy="14" r="5" stroke="currentColor" stroke-width="2.5"/>
-                <circle cx="32" cy="14" r="5" stroke="currentColor" stroke-width="2.5"/>
-                <path d="M4 38c0-6 5-11 12-11s12 5 12 11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M32 27c5 0 10 4 10 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Firemní aktivity</h3>
-            <p>Jednodenní akce pro firmy a skupiny (kolo, běh).</p>
-          </article>
-
-          <article class="karta">
-            <div class="karta__icon">
-              <!-- Workshop / megafon -->
+              <!-- Workshopy / megafon -->
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M8 17h6l16-9v28l-16-9H8a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
                 <path d="M14 33l3 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
                 <path d="M36 21c3 0 5 2 5 5s-2 5-5 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Běžecké workshopy pro firmy</h3>
+            <h3>Workshopy a firemní akce</h3>
+            <p>Běžecké workshopy, kondiční kempy a sportovní akce pro firmy i skupiny.</p>
           </article>
 
         </div>
       </div>
     </section>
 
-    <!-- ====== 4. VZDĚLÁNÍ A PRAXE ====== -->
-    <section class="vzdelani" id="vzdelani">
+    <!-- ====== CENÍK ====== -->
+    <section class="cenik" id="cenik">
       <div class="container">
-        <span class="section-label section-label--center">Zázemí</span>
-        <h2 class="section-title section-title--center">Vzdělání a zkušenosti</h2>
-        <div class="vzdelani__layout">
+        <span class="section-label section-label--center">Ceník</span>
+        <h2 class="section-title section-title--center">Ceník</h2>
+        <div class="cenik__karty">
 
-          <!-- Levý sloupec: vzdělání + foto -->
-          <div class="vzdelani__col">
-            <h3 class="vzdelani__col-title">Vzdělání</h3>
-            <div class="timeline">
-              <div class="timeline__item">
-                <div class="timeline__dot"></div>
-                <div class="timeline__body">
-                  <span class="timeline__period">09/2008 – 02/2013</span>
-                  <strong>Masarykova univerzita</strong>
-                  <p>Fakulta sportovních studií, obor Regenerace a výživa</p>
-                </div>
-              </div>
-            </div>
-            <!-- Celý snímek bez ořezu -->
-            <div class="vzdelani__photo-wrap">
-              <img
-                src="3.jpg"
-                alt="Vlastimil Lysák — trénink"
-                loading="lazy"
-              />
-            </div>
-          </div>
+          <article class="cenik__karta">
+            <p class="cenik__sluzba">Osobní trénink — 60 min</p>
+            <p class="cenik__popis">pravidelná dlouhodobá spolupráce</p>
+            <p class="cenik__cena">700 Kč</p>
+          </article>
 
-          <!-- Pravý sloupec: praxe jako timeline -->
-          <div class="vzdelani__col">
-            <h3 class="vzdelani__col-title">Praxe</h3>
-            <div class="timeline">
+          <article class="cenik__karta">
+            <p class="cenik__sluzba">Individuální trénink — 70 min</p>
+            <p class="cenik__popis">technika, konzultace, detailní vedení</p>
+            <p class="cenik__cena">900 Kč</p>
+          </article>
 
-              <div class="timeline__item">
-                <div class="timeline__dot timeline__dot--accent"></div>
-                <div class="timeline__body">
-                  <span class="timeline__period">2023 – dosud</span>
-                  <strong>SK Lišeň — fotbalová akademie</strong>
-                  <p>Kondiční trenér fotbalové akademie mládeže</p>
-                </div>
-              </div>
+          <article class="cenik__karta">
+            <p class="cenik__sluzba">Konzultace / diagnostika</p>
+            <p class="cenik__popis">&nbsp;</p>
+            <p class="cenik__cena">700 Kč</p>
+          </article>
 
-              <div class="timeline__item">
-                <div class="timeline__dot timeline__dot--accent"></div>
-                <div class="timeline__body">
-                  <span class="timeline__period">2020 – 2022</span>
-                  <strong>SK KP Brno</strong>
-                  <p>Kondiční trenér extraligového klubu</p>
-                </div>
-              </div>
-
-              <div class="timeline__item">
-                <div class="timeline__dot timeline__dot--accent"></div>
-                <div class="timeline__body">
-                  <span class="timeline__period">2018 – dosud</span>
-                  <strong>Fitness Boby</strong>
-                  <p>Osobní trenér</p>
-                </div>
-              </div>
-
-              <div class="timeline__item">
-                <div class="timeline__dot timeline__dot--accent"></div>
-                <div class="timeline__body">
-                  <span class="timeline__period">2018 – dosud</span>
-                  <strong>Běžecké kurzy</strong>
-                  <p>Pořádání běžeckých kurzů</p>
-                </div>
-              </div>
-
-              <div class="timeline__item">
-                <div class="timeline__dot timeline__dot--accent"></div>
-                <div class="timeline__body">
-                  <span class="timeline__period">2017 – 2018</span>
-                  <strong>Běžecký klub Brno</strong>
-                  <p>Hlavní trenér, skupinové běžecké lekce</p>
-                </div>
-              </div>
-
-              <div class="timeline__item">
-                <div class="timeline__dot timeline__dot--accent"></div>
-                <div class="timeline__body">
-                  <span class="timeline__period">2016 – dosud</span>
-                  <strong>Kempy a fitness víkendy</strong>
-                  <p>Pořádání běžeckých kondičních kempů a fitness víkendů</p>
-                </div>
-              </div>
-
-              <div class="timeline__item">
-                <div class="timeline__dot timeline__dot--accent"></div>
-                <div class="timeline__body">
-                  <span class="timeline__period">2016 – dosud</span>
-                  <strong>Běžecké tréninky na dráze</strong>
-                  <p>Pravidelné běžecké tréninky na dráze</p>
-                </div>
-              </div>
-
-              <div class="timeline__item">
-                <div class="timeline__dot timeline__dot--accent"></div>
-                <div class="timeline__body">
-                  <span class="timeline__period">2008 – 2015</span>
-                  <strong>Star Fitness s.r.o.</strong>
-                  <p>Trenér Startrac</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
+          <article class="cenik__karta">
+            <p class="cenik__sluzba">Tréninkový běžecký plán</p>
+            <p class="cenik__popis">měsíční plán</p>
+            <p class="cenik__cena">1 500 Kč</p>
+          </article>
 
         </div>
-
-        <!-- Kurzy a kvalifikace — plná šířka pod griddem -->
-        <div class="kurzy">
-          <h3 class="kurzy__nadpis">Vybrané kurzy a kvalifikace</h3>
-          <ul class="kurzy__list">
-            <li>Závěsný systém CrossCore</li>
-            <li>Core systém — stabilizace, principy posilování, funkční trénink</li>
-            <li>Vedený pasivní strečink, staticko-fyzio diagnostika (Academy FACE Czech)</li>
-            <li>Dynamický strečink (Coretraining Praha)</li>
-            <li>Sportovní masáž, Dornova metoda</li>
-            <li>Poradce pro výživu — biochemie, fyziologie, sportovní výživa, redukční výživa</li>
-            <li>Instruktor spinningu (Startrac)</li>
-            <li>Fotbalový trenér III. třídy ČMFS</li>
-          </ul>
-        </div>
-
       </div>
     </section>
 
-    <!-- ====== 5. KONTAKT ====== -->
+    <!-- ====== PRAXE ====== -->
+    <section class="praxe" id="praxe">
+      <div class="container">
+        <span class="section-label section-label--center">Praxe</span>
+        <h2 class="section-title section-title--center">Praxe</h2>
+        <ul class="praxe__list">
+          <li>Kondiční trenér fotbalové akademie mládeže SK Líšeň</li>
+          <li>Kondiční trenér extraligového klubu SK KP Brno</li>
+          <li>Fitness Boby — osobní trenér</li>
+          <li>Pořádání běžeckých kurzů a kempů</li>
+          <li>Vedení skupinových běžeckých tréninků</li>
+          <li>Kondiční příprava sportovců</li>
+          <li>Spinning instruktor</li>
+          <li>Lektor sportovní výživy</li>
+          <li>Regenerace, mobilita a funkční trénink</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ====== VZDĚLÁNÍ ====== -->
+    <section class="vzdelani" id="vzdelani">
+      <div class="container vzdelani__inner">
+        <div class="vzdelani__text">
+          <span class="section-label">Vzdělání</span>
+          <h2 class="section-title">Vzdělání</h2>
+
+          <div class="vzdelani__univerzita">
+            <strong>Masarykova univerzita</strong>
+            <p>Fakulta sportovních studií</p>
+            <p>Obor: Regenerace a výživa</p>
+          </div>
+
+          <p class="vzdelani__dále-label">Dále:</p>
+          <ul class="vzdelani__kurzy">
+            <li>sportovní výživa</li>
+            <li>funkční trénink</li>
+            <li>core systém</li>
+            <li>sportovní masáže</li>
+            <li>dynamický strečink</li>
+            <li>závěsné systémy</li>
+            <li>psychohygiena</li>
+            <li>silový trénink</li>
+            <li>regenerace</li>
+          </ul>
+        </div>
+        <!-- Celý snímek bez ořezu -->
+        <div class="vzdelani__photo-wrap">
+          <img
+            src="3.jpg"
+            alt="Vlastimil Lysák — trénink"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== KONTAKT ====== -->
     <section class="kontakt" id="kontakt">
       <div class="container">
         <span class="section-label section-label--center">Kontakt</span>
-        <h2 class="section-title section-title--center">Pojďme se spojit</h2>
+        <h2 class="section-title section-title--center">Kontakt</h2>
         <div class="kontakt__karty">
 
           <!-- Telefon -->
@@ -393,7 +359,7 @@
                 <rect x="6" y="6" width="36" height="36" rx="10" stroke="currentColor" stroke-width="2.5"/>
                 <circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="2.5"/>
                 <circle cx="35" cy="13" r="2" fill="currentColor"/>
-            </svg>
+              </svg>
             </div>
             <span class="kontakt__label">Instagram</span>
             <span class="kontakt__value">@vlastikl_trenerbrno</span>

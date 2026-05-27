@@ -1,19 +1,19 @@
 /* ====================================================
    Vlastimil Lysák — Osobní web
-   Barevné schéma: tyrkysové pozadí, bílý text,
-   růžové akcenty pro tlačítka a interaktivní prvky.
+   Barevné schéma: modrá (tyrkys do modra), bílý text,
+   růžové akcenty (#EC4899).
    ==================================================== */
 
 /* ── Barevné proměnné ── */
 :root {
-  /* Modrá paleta (tyrkys posunutý do modra) */
-  --clr-bg:         #0EA5C4;   /* modrá tyrkysová — hlavní pozadí */
-  --clr-surface:    #0A6B8A;   /* tmavší modrá — alternativní sekce */
-  --clr-surface2:   rgba(255, 255, 255, 0.08);  /* karty — skleněný efekt */
+  /* Modrá paleta */
+  --clr-bg:         #0EA5C4;   /* hlavní pozadí */
+  --clr-surface:    #0A6B8A;   /* alternativní sekce */
+  --clr-surface2:   rgba(255, 255, 255, 0.08);  /* karty */
   --clr-border:     rgba(255, 255, 255, 0.18);
-  --clr-nav:        #08506E;   /* nejtmavší modrá — patička */
+  --clr-nav:        #08506E;   /* patička */
 
-  /* Bílý text na tyrkysovém pozadí */
+  /* Bílý text */
   --clr-silver-hi:  #FFFFFF;
   --clr-silver:     rgba(255, 255, 255, 0.90);
   --clr-silver-mid: rgba(255, 255, 255, 0.82);
@@ -43,7 +43,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
+  scroll-padding-top: 64px;
 }
 
 body {
@@ -99,7 +99,6 @@ ul {
   margin-bottom: 1.5rem;
 }
 
-/* Kurzíva v nadpisu dostane růžový akcent */
 .section-title em {
   font-style: italic;
   color: var(--clr-accent);
@@ -107,7 +106,7 @@ ul {
 
 .section-title--center { text-align: center; }
 
-/* ── Tlačítka — bílý průhledný rámeček, hover = poloprůhledná výplň ── */
+/* ── Tlačítka ── */
 .btn {
   display: inline-block;
   padding: 0.85em 1em;
@@ -134,14 +133,14 @@ ul {
 }
 
 /* ════════════════════════════════════════
-   NAVIGACE
+   NAVIGACE — růžové pozadí
    ════════════════════════════════════════ */
 .nav {
   position: fixed;
   top: 0;
   inset-inline: 0;
   z-index: 100;
-  padding: 0.9rem 0;
+  padding: 0.75rem 0;
   background: #EC4899;
   transition: background var(--transition), backdrop-filter var(--transition);
 }
@@ -166,7 +165,7 @@ ul {
   font-family: var(--ff-heading);
   font-size: 1.3rem;
   font-weight: 800;
-  color: var(--clr-silver);
+  color: #FFFFFF;
   letter-spacing: 0.05em;
   transition: color var(--transition);
 }
@@ -175,14 +174,14 @@ ul {
 
 .nav__links {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .nav__links a {
-  font-size: 0.9rem;
+  font-size: 0.87rem;
   font-weight: 500;
-  color: var(--clr-silver-dim);
-  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.03em;
   transition: color var(--transition);
 }
 
@@ -206,15 +205,13 @@ ul {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--clr-silver);
+  background: #FFFFFF;
   border-radius: 2px;
   transition: transform var(--transition), opacity var(--transition);
 }
 
 /* ════════════════════════════════════════
-   HERO — dvousloupcový layout 50/50
-   Levý sloupec: text + tlačítko
-   Pravý sloupec: foto (contain, bez ořezu)
+   HERO — dvousloupcový layout
    ════════════════════════════════════════ */
 .hero {
   min-height: 100svh;
@@ -223,22 +220,13 @@ ul {
   background: linear-gradient(135deg, #0EA5C4 0%, #0C87A8 100%);
 }
 
-/* Levý sloupec — text, vertikálně vycentrován */
+/* Levý sloupec — text */
 .hero__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: clamp(2rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
-  padding-top: calc(clamp(2rem, 6vw, 5rem) + 70px); /* kompenzace výšky nav */
-}
-
-.hero__eyebrow {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--clr-silver-dim);
-  margin-bottom: 1rem;
+  padding-top: calc(clamp(2rem, 6vw, 5rem) + 64px);
 }
 
 .hero__name {
@@ -256,12 +244,12 @@ ul {
   color: var(--clr-silver);
   font-weight: 400;
   margin-bottom: 2.5rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
-/* Tlačítko v hero — růžové vyplněné */
+/* Hero tlačítko — růžové vyplněné */
 .hero__text .btn--outline {
-  padding-inline: 0.5em;
+  align-self: flex-start;
   background: var(--clr-accent);
   color: #FFFFFF;
   border-color: var(--clr-accent);
@@ -274,7 +262,7 @@ ul {
   color: #FFFFFF;
 }
 
-/* Pravý sloupec — foto obsahuje celý snímek bez ořezu */
+/* Pravý sloupec — foto bez ořezu */
 .hero__photo-wrap {
   display: flex;
   align-items: center;
@@ -291,52 +279,143 @@ ul {
 }
 
 /* ════════════════════════════════════════
-   FILOZOFIE
+   O MNĚ
    ════════════════════════════════════════ */
-.filozofie {
+.o-mne {
   padding-block: var(--section-py);
   background: var(--clr-bg);
 }
 
-.filozofie__inner {
+.o-mne__inner {
   display: grid;
-  /* Na desktopu 50/50, na mobilu pod sebou */
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: center;
+  align-items: start;
 }
 
-.filozofie__text p {
+.o-mne__tagline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--clr-accent);
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.02em;
+}
+
+.o-mne__text p {
   color: var(--clr-silver-mid);
-  margin-bottom: 2rem;
-  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+.o-mne__text strong {
+  color: var(--clr-silver-hi);
+  font-weight: 700;
+}
+
+/* Seznam hodnot */
+.o-mne__list {
+  margin: 0 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.o-mne__list li {
+  padding-left: 1.25rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--clr-silver-mid);
+}
+
+.o-mne__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--clr-accent);
 }
 
 /* Foto bez ořezu */
-.filozofie__photo-wrap {
+.o-mne__photo-wrap {
   background: rgba(0, 0, 0, 0.12);
   border-radius: var(--radius);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 400px;
+  min-height: 450px;
 }
 
-.filozofie__photo-wrap img {
+.o-mne__photo-wrap img {
   width: 100%;
-  height: 500px;
+  height: 520px;
   object-fit: contain;
   object-position: center;
 }
 
 /* ════════════════════════════════════════
-   SPECIALIZACE — KARTY
-   3 sloupce desktop, 2 tablet, 1 mobil
+   FILOZOFIE — citát + hodnoty
    ════════════════════════════════════════ */
-.specializace {
+.filozofie {
   padding-block: var(--section-py);
   background: var(--clr-surface);
+}
+
+.filozofie__inner {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* Velký citát — růžový */
+.filozofie__citat {
+  font-family: var(--ff-heading);
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  font-style: italic;
+  color: var(--clr-accent);
+  margin: 0.5rem 0 2.5rem;
+  line-height: 1.2;
+}
+
+/* Seznam hodnot — 2 sloupce */
+.filozofie__hodnoty {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem 2.5rem;
+  text-align: left;
+  max-width: 580px;
+  margin-inline: auto;
+}
+
+.filozofie__hodnoty li {
+  font-size: 0.95rem;
+  color: var(--clr-silver-mid);
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.filozofie__hodnoty li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--clr-accent);
+}
+
+/* ════════════════════════════════════════
+   SLUŽBY — mřížka karet
+   3 sloupce desktop, 2 tablet, 1 mobil
+   ════════════════════════════════════════ */
+.sluzby {
+  padding-block: var(--section-py);
+  background: var(--clr-bg);
 }
 
 .karty {
@@ -354,7 +433,6 @@ ul {
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
-/* Hover: růžové zvýraznění */
 .karta:hover {
   border-color: var(--clr-accent);
   transform: translateY(-4px);
@@ -388,160 +466,186 @@ ul {
 }
 
 /* ════════════════════════════════════════
-   VZDĚLÁNÍ A PRAXE
+   CENÍK — cenové karty
    ════════════════════════════════════════ */
-.vzdelani {
+.cenik {
+  padding-block: var(--section-py);
+  background: var(--clr-surface);
+}
+
+.cenik__karty {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 800px;
+  margin: 3rem auto 0;
+}
+
+.cenik__karta {
+  background: var(--clr-surface2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.cenik__karta:hover {
+  border-color: var(--clr-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.20), 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cenik__sluzba {
+  font-family: var(--ff-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-silver-hi);
+  line-height: 1.3;
+}
+
+.cenik__popis {
+  font-size: 0.82rem;
+  color: var(--clr-silver-dim);
+  min-height: 1.2em;
+}
+
+/* Cena — velká, růžová */
+.cenik__cena {
+  font-family: var(--ff-heading);
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--clr-accent);
+  margin-top: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+/* ════════════════════════════════════════
+   PRAXE — seznam bez dat
+   ════════════════════════════════════════ */
+.praxe {
   padding-block: var(--section-py);
   background: var(--clr-bg);
 }
 
-.vzdelani__layout {
+.praxe__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 3rem;
   margin-top: 3rem;
+  max-width: 900px;
+  margin-inline: auto;
+  margin-block-start: 3rem;
 }
 
-.vzdelani__col-title {
-  font-family: var(--ff-heading);
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--clr-silver-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  margin-bottom: 1.75rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--clr-border);
-}
-
-/* ── Timeline ── */
-.timeline {
-  display: flex;
-  flex-direction: column;
-}
-
-.timeline__item {
-  display: flex;
-  gap: 1.25rem;
+.praxe__list li {
+  padding-left: 1.4rem;
   position: relative;
-  padding-bottom: 2rem;
-}
-
-/* Svislá linka mezi položkami */
-.timeline__item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  left: 7px;
-  top: 14px;
-  bottom: 0;
-  width: 1px;
-  background: var(--clr-border);
-}
-
-.timeline__dot {
-  flex-shrink: 0;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: transparent;
-  border: 2px solid var(--clr-border);
-  margin-top: 3px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Aktivní/praxe bod: růžový */
-.timeline__dot--accent {
-  border-color: var(--clr-accent);
-  background: var(--clr-accent);
-}
-
-.timeline__body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.timeline__period {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--clr-silver-dim);
-  text-transform: uppercase;
-}
-
-.timeline__body strong {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--clr-silver-hi);
-}
-
-.timeline__body p {
-  font-size: 0.875rem;
-  color: var(--clr-silver-dim);
+  font-size: 0.97rem;
+  color: var(--clr-silver-mid);
   line-height: 1.55;
 }
 
-/* Foto v sekci vzdělání — contain bez ořezu */
+.praxe__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--clr-accent);
+}
+
+/* ════════════════════════════════════════
+   VZDĚLÁNÍ — 2 sloupce: text + foto
+   ════════════════════════════════════════ */
+.vzdelani {
+  padding-block: var(--section-py);
+  background: var(--clr-surface);
+}
+
+.vzdelani__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Blok s univerzitou */
+.vzdelani__univerzita {
+  margin-bottom: 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.vzdelani__univerzita strong {
+  font-family: var(--ff-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--clr-silver-hi);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.vzdelani__univerzita p {
+  font-size: 0.9rem;
+  color: var(--clr-silver-mid);
+}
+
+/* Nadpis "Dále:" */
+.vzdelani__dále-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-silver-dim);
+  margin-bottom: 1rem;
+}
+
+/* Seznam kurzů — 2 sloupce */
+.vzdelani__kurzy {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem 2rem;
+}
+
+.vzdelani__kurzy li {
+  font-size: 0.875rem;
+  color: var(--clr-silver-mid);
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.vzdelani__kurzy li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--clr-accent);
+}
+
+/* Foto bez ořezu */
 .vzdelani__photo-wrap {
-  margin-top: 2.5rem;
   background: rgba(0, 0, 0, 0.12);
   border-radius: var(--radius);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 260px;
+  min-height: 400px;
 }
 
 .vzdelani__photo-wrap img {
   width: 100%;
-  height: 280px;
+  height: 480px;
   object-fit: contain;
   object-position: center;
-}
-
-/* ── Kurzy a kvalifikace — plná šířka pod griddem ── */
-.kurzy {
-  margin-top: 3.5rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid var(--clr-border);
-}
-
-.kurzy__nadpis {
-  font-family: var(--ff-heading);
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--clr-silver-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  margin-bottom: 1.5rem;
-}
-
-.kurzy__list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem 3rem;
-}
-
-.kurzy__list li {
-  font-size: 0.875rem;
-  color: var(--clr-silver-mid);
-  padding-left: 1.25rem;
-  position: relative;
-  line-height: 1.5;
-}
-
-/* Růžová tečka před každou položkou */
-.kurzy__list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.6em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--clr-accent);
 }
 
 /* ════════════════════════════════════════
@@ -549,15 +653,7 @@ ul {
    ════════════════════════════════════════ */
 .kontakt {
   padding-block: var(--section-py);
-  background: var(--clr-surface);
-}
-
-.kontakt__intro {
-  text-align: center;
-  color: var(--clr-silver-dim);
-  max-width: 540px;
-  margin: 0 auto 3rem;
-  font-size: 1.05rem;
+  background: var(--clr-bg);
 }
 
 .kontakt__karty {
@@ -565,7 +661,7 @@ ul {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   max-width: 900px;
-  margin-inline: auto;
+  margin: 3rem auto 0;
 }
 
 .kontakt__karta {
@@ -639,22 +735,27 @@ ul {
    RESPONZIVITA
    ════════════════════════════════════════ */
 
-/* Tablety — 2 sloupce na karty specializace */
+/* Tablet (900px) — 2 sloupce pro karty, jednosloupcové sekce */
 @media (max-width: 900px) {
   .karty {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .filozofie__inner {
+  .cenik__karty {
+    grid-template-columns: 1fr;
+    max-width: 460px;
+  }
+
+  .o-mne__inner {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 
-  .filozofie__photo-wrap {
+  .o-mne__photo-wrap {
     order: -1;
   }
 
-  .vzdelani__layout {
+  .vzdelani__inner {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -665,49 +766,8 @@ ul {
   }
 }
 
-/* Mobily — 1 sloupec */
-@media (max-width: 600px) {
-  :root {
-    --section-py: 3.5rem;
-  }
-
-  .karty {
-    grid-template-columns: 1fr;
-  }
-
-  .kurzy__list {
-    grid-template-columns: 1fr;
-  }
-
-  /* Hero: foto nahoře (max 50vh), text pod ní */
-  .hero {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    min-height: 100svh;
-  }
-
-  .hero__photo-wrap {
-    order: -1;
-    height: 50svh;
-    justify-content: center;
-    padding-top: 60px;
-  }
-
-  .hero__img {
-    object-position: center top;
-  }
-
-  .hero__text {
-    padding: 2rem 1.5rem 3rem;
-    padding-top: 1.5rem;
-    text-align: center;
-  }
-
-  .hero__name {
-    font-size: clamp(2.2rem, 11vw, 3.5rem);
-  }
-
-  /* Hamburger menu zapnut */
+/* Mobil (768px) — hamburger menu */
+@media (max-width: 768px) {
   .nav__toggle {
     display: flex;
   }
@@ -715,7 +775,7 @@ ul {
   .nav__links {
     position: fixed;
     inset: 0;
-    top: 60px;
+    top: 56px;
     background: rgba(236, 72, 153, 0.97);
     flex-direction: column;
     align-items: center;
@@ -747,8 +807,8 @@ ul {
   }
 }
 
-/* ── Desktop: logo skryto, navigační položky zarovnány doleva ── */
-@media (min-width: 601px) {
+/* Desktop (769px+) — logo schováno, nav vlevo */
+@media (min-width: 769px) {
   .nav__logo {
     display: none;
   }
@@ -758,7 +818,61 @@ ul {
   }
 }
 
-/* ── Přístupnost: focus indikátor — růžový akcent ── */
+/* Mobil (600px) — 1 sloupec karty, hero layout */
+@media (max-width: 600px) {
+  :root {
+    --section-py: 3.5rem;
+  }
+
+  .karty {
+    grid-template-columns: 1fr;
+  }
+
+  .filozofie__hodnoty {
+    grid-template-columns: 1fr;
+  }
+
+  .praxe__list {
+    grid-template-columns: 1fr;
+  }
+
+  .vzdelani__kurzy {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hero: foto nahoře, text pod ní */
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    min-height: 100svh;
+  }
+
+  .hero__photo-wrap {
+    order: -1;
+    height: 50svh;
+    justify-content: center;
+    padding-top: 56px;
+  }
+
+  .hero__img {
+    object-position: center top;
+  }
+
+  .hero__text {
+    padding: 2rem 1.5rem 3rem;
+    text-align: center;
+  }
+
+  .hero__text .btn--outline {
+    align-self: center;
+  }
+
+  .hero__name {
+    font-size: clamp(2.2rem, 11vw, 3.5rem);
+  }
+}
+
+/* ── Přístupnost: focus indikátor ── */
 :focus-visible {
   outline: 2px solid var(--clr-accent);
   outline-offset: 3px;
