@@ -6,12 +6,12 @@
 
 /* ── Barevné proměnné ── */
 :root {
-  /* Tyrkysová paleta */
-  --clr-bg:         #0D9488;   /* sytá tyrkysová — hlavní pozadí */
-  --clr-surface:    #115E59;   /* tmavší tyrkys — alternativní sekce */
+  /* Modrá paleta (tyrkys posunutý do modra) */
+  --clr-bg:         #0EA5C4;   /* modrá tyrkysová — hlavní pozadí */
+  --clr-surface:    #0A6B8A;   /* tmavší modrá — alternativní sekce */
   --clr-surface2:   rgba(255, 255, 255, 0.08);  /* karty — skleněný efekt */
   --clr-border:     rgba(255, 255, 255, 0.18);
-  --clr-nav:        #134E4A;   /* nejtmavší tyrkys — navigace, patička */
+  --clr-nav:        #08506E;   /* nejtmavší modrá — patička */
 
   /* Bílý text na tyrkysovém pozadí */
   --clr-silver-hi:  #FFFFFF;
@@ -142,16 +142,16 @@ ul {
   inset-inline: 0;
   z-index: 100;
   padding: 0.9rem 0;
-  background: var(--clr-nav);
+  background: #EC4899;
   transition: background var(--transition), backdrop-filter var(--transition);
 }
 
-/* Po scrollu: tmavší s rozmazáním */
+/* Po scrollu: tmavší růžová s rozmazáním */
 .nav.nav--scrolled {
-  background: rgba(19, 78, 74, 0.95);
+  background: rgba(236, 72, 153, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom: 1px solid rgba(219, 39, 119, 0.40);
 }
 
 .nav__inner {
@@ -171,7 +171,7 @@ ul {
   transition: color var(--transition);
 }
 
-.nav__logo:hover { color: var(--clr-hover); }
+.nav__logo:hover { color: #DB2777; }
 
 .nav__links {
   display: flex;
@@ -188,7 +188,7 @@ ul {
 
 .nav__links a:hover,
 .nav__links a:focus-visible {
-  color: var(--clr-hover);
+  color: #DB2777;
 }
 
 /* Hamburger — skrytý na desktopu */
@@ -220,7 +220,7 @@ ul {
   min-height: 100svh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
+  background: linear-gradient(135deg, #0EA5C4 0%, #0C87A8 100%);
 }
 
 /* Levý sloupec — text, vertikálně vycentrován */
@@ -716,7 +716,7 @@ ul {
     position: fixed;
     inset: 0;
     top: 60px;
-    background: rgba(19, 78, 74, 0.97);
+    background: rgba(236, 72, 153, 0.97);
     flex-direction: column;
     align-items: center;
     justify-content: center;
