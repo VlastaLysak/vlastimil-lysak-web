@@ -1,25 +1,28 @@
 /* ====================================================
    Vlastimil Lysák — Osobní web
-   Barevné schéma: černé pozadí, výhradně stříbrné tóny
-   Bílá (#ffffff) pouze pro hover/aktivní stav, ne jako
-   výchozí barva textu.
+   Barevné schéma: tyrkysové pozadí, bílý text,
+   růžové akcenty pro tlačítka a interaktivní prvky.
    ==================================================== */
 
 /* ── Barevné proměnné ── */
 :root {
-  --clr-bg:         #0a0a0a;
-  --clr-surface:    #111111;
-  --clr-surface2:   #171717;
-  --clr-border:     #2a2a2a;
+  /* Tyrkysová paleta */
+  --clr-bg:         #0D9488;   /* sytá tyrkysová — hlavní pozadí */
+  --clr-surface:    #115E59;   /* tmavší tyrkys — alternativní sekce */
+  --clr-surface2:   rgba(255, 255, 255, 0.08);  /* karty — skleněný efekt */
+  --clr-border:     rgba(255, 255, 255, 0.18);
+  --clr-nav:        #134E4A;   /* nejtmavší tyrkys — navigace, patička */
 
-  /* Stříbrná paleta — žádná čistá bílá jako výchozí text */
-  --clr-silver-hi:  #e8e8e8;   /* světlá stříbrná, nadpisy */
-  --clr-silver:     #c0c0c0;   /* primární stříbrná */
-  --clr-silver-mid: #a0a0a0;   /* střední, body text */
-  --clr-silver-dim: #888888;   /* tlumená, popisky, footer */
+  /* Bílý text na tyrkysovém pozadí */
+  --clr-silver-hi:  #FFFFFF;
+  --clr-silver:     rgba(255, 255, 255, 0.90);
+  --clr-silver-mid: rgba(255, 255, 255, 0.82);
+  --clr-silver-dim: rgba(255, 255, 255, 0.60);
+  --clr-hover:      #FFFFFF;
 
-  /* Pouze pro hover/focus */
-  --clr-hover:      #ffffff;
+  /* Růžový akcent */
+  --clr-accent:     #EC4899;
+  --clr-accent-hov: #DB2777;
 
   --ff-body:    'Inter', system-ui, -apple-system, sans-serif;
   --ff-heading: 'Montserrat', 'Inter', system-ui, sans-serif;
@@ -96,14 +99,15 @@ ul {
   margin-bottom: 1.5rem;
 }
 
+/* Kurzíva v nadpisu dostane růžový akcent */
 .section-title em {
   font-style: italic;
-  color: var(--clr-silver);
+  color: var(--clr-accent);
 }
 
 .section-title--center { text-align: center; }
 
-/* ── Tlačítka — pouze stříbrný rámeček + text, hover = vyplnit ── */
+/* ── Tlačítka — bílý průhledný rámeček, hover = poloprůhledná výplň ── */
 .btn {
   display: inline-block;
   padding: 0.85em 1em;
@@ -117,14 +121,15 @@ ul {
 
 .btn--outline {
   background: transparent;
-  color: var(--clr-silver);
-  border: 2px solid var(--clr-silver);
+  color: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.70);
 }
 
 .btn--outline:hover,
 .btn--outline:focus-visible {
-  background: var(--clr-silver);
-  color: #000;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
   transform: translateY(-2px);
 }
 
@@ -137,15 +142,16 @@ ul {
   inset-inline: 0;
   z-index: 100;
   padding: 0.9rem 0;
+  background: var(--clr-nav);
   transition: background var(--transition), backdrop-filter var(--transition);
 }
 
-/* Tmavé pozadí po scrollu — třída přidána JavaScriptem */
+/* Po scrollu: tmavší s rozmazáním */
 .nav.nav--scrolled {
-  background: rgba(10, 10, 10, 0.93);
+  background: rgba(19, 78, 74, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--clr-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .nav__inner {
@@ -214,7 +220,7 @@ ul {
   min-height: 100svh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: var(--clr-bg);
+  background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
 }
 
 /* Levý sloupec — text, vertikálně vycentrován */
@@ -223,7 +229,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   padding: clamp(2rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
-  padding-top: calc(clamp(2rem, 6vw, 5rem) + 70px); /* kompenzace nav */
+  padding-top: calc(clamp(2rem, 6vw, 5rem) + 70px); /* kompenzace výšky nav */
 }
 
 .hero__eyebrow {
@@ -253,19 +259,19 @@ ul {
   letter-spacing: 0.03em;
 }
 
-/* Tlačítko v hero — stříbrné vyplněné, užší */
+/* Tlačítko v hero — růžové vyplněné */
 .hero__text .btn--outline {
   padding-inline: 0.5em;
-  background: var(--clr-silver);
-  color: #000;
-  border-color: var(--clr-silver);
+  background: var(--clr-accent);
+  color: #FFFFFF;
+  border-color: var(--clr-accent);
 }
 
 .hero__text .btn--outline:hover,
 .hero__text .btn--outline:focus-visible {
-  background: var(--clr-hover);
-  border-color: var(--clr-hover);
-  color: #000;
+  background: var(--clr-accent-hov);
+  border-color: var(--clr-accent-hov);
+  color: #FFFFFF;
 }
 
 /* Pravý sloupec — foto obsahuje celý snímek bez ořezu */
@@ -273,7 +279,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background: var(--clr-bg);
+  background: transparent;
   overflow: hidden;
 }
 
@@ -306,9 +312,9 @@ ul {
   font-size: 1.05rem;
 }
 
-/* Foto bez ořezu — contain na černém pozadí */
+/* Foto bez ořezu */
 .filozofie__photo-wrap {
-  background: var(--clr-bg);
+  background: rgba(0, 0, 0, 0.12);
   border-radius: var(--radius);
   overflow: hidden;
   display: flex;
@@ -342,24 +348,23 @@ ul {
 
 .karta {
   background: var(--clr-surface2);
-  /* Tenký stříbrný rámeček */
   border: 1px solid var(--clr-border);
   border-radius: var(--radius);
   padding: 1.75rem 1.5rem;
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
-/* Hover: stříbrný glow */
+/* Hover: růžové zvýraznění */
 .karta:hover {
-  border-color: var(--clr-silver);
+  border-color: var(--clr-accent);
   transform: translateY(-4px);
-  box-shadow: 0 0 20px rgba(192, 192, 192, 0.12), 0 4px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 24px rgba(236, 72, 153, 0.25), 0 4px 24px rgba(0, 0, 0, 0.20);
 }
 
 .karta__icon {
   width: 42px;
   height: 42px;
-  color: var(--clr-silver);
+  color: var(--clr-accent);
   margin-bottom: 1.1rem;
 }
 
@@ -438,17 +443,17 @@ ul {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: var(--clr-surface2);
+  background: transparent;
   border: 2px solid var(--clr-border);
   margin-top: 3px;
   position: relative;
   z-index: 1;
 }
 
-/* Aktivní/praxe bod: stříbrný */
+/* Aktivní/praxe bod: růžový */
 .timeline__dot--accent {
-  border-color: var(--clr-silver);
-  background: var(--clr-silver);
+  border-color: var(--clr-accent);
+  background: var(--clr-accent);
 }
 
 .timeline__body {
@@ -480,7 +485,7 @@ ul {
 /* Foto v sekci vzdělání — contain bez ořezu */
 .vzdelani__photo-wrap {
   margin-top: 2.5rem;
-  background: var(--clr-bg);
+  background: rgba(0, 0, 0, 0.12);
   border-radius: var(--radius);
   overflow: hidden;
   display: flex;
@@ -494,6 +499,49 @@ ul {
   height: 280px;
   object-fit: contain;
   object-position: center;
+}
+
+/* ── Kurzy a kvalifikace — plná šířka pod griddem ── */
+.kurzy {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--clr-border);
+}
+
+.kurzy__nadpis {
+  font-family: var(--ff-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--clr-silver-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 1.5rem;
+}
+
+.kurzy__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 3rem;
+}
+
+.kurzy__list li {
+  font-size: 0.875rem;
+  color: var(--clr-silver-mid);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+/* Růžová tečka před každou položkou */
+.kurzy__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--clr-accent);
 }
 
 /* ════════════════════════════════════════
@@ -536,16 +584,16 @@ ul {
 
 .kontakt__karta:hover,
 .kontakt__karta:focus-visible {
-  border-color: var(--clr-silver);
+  border-color: var(--clr-accent);
   transform: translateY(-4px);
-  box-shadow: 0 0 20px rgba(192, 192, 192, 0.1), 0 4px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 24px rgba(236, 72, 153, 0.22), 0 4px 24px rgba(0, 0, 0, 0.20);
   outline: none;
 }
 
 .kontakt__icon {
   width: 38px;
   height: 38px;
-  color: var(--clr-silver);
+  color: var(--clr-accent);
   margin-bottom: 0.4rem;
 }
 
@@ -573,8 +621,8 @@ ul {
    ════════════════════════════════════════ */
 .footer {
   padding: 2rem 0;
-  background: var(--clr-bg);
-  border-top: 1px solid var(--clr-border);
+  background: var(--clr-nav);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer__inner {
@@ -583,7 +631,6 @@ ul {
 
 .footer__inner p {
   font-size: 0.82rem;
-  /* Tlumená stříbrná dle zadání */
   color: var(--clr-silver-dim);
   letter-spacing: 0.04em;
 }
@@ -628,6 +675,10 @@ ul {
     grid-template-columns: 1fr;
   }
 
+  .kurzy__list {
+    grid-template-columns: 1fr;
+  }
+
   /* Hero: foto nahoře (max 50vh), text pod ní */
   .hero {
     grid-template-columns: 1fr;
@@ -665,7 +716,7 @@ ul {
     position: fixed;
     inset: 0;
     top: 60px;
-    background: rgba(10, 10, 10, 0.97);
+    background: rgba(19, 78, 74, 0.97);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -707,8 +758,8 @@ ul {
   }
 }
 
-/* ── Přístupnost: focus indikátor ── */
+/* ── Přístupnost: focus indikátor — růžový akcent ── */
 :focus-visible {
-  outline: 2px solid var(--clr-silver);
+  outline: 2px solid var(--clr-accent);
   outline-offset: 3px;
 }
