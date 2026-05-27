@@ -44,6 +44,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 64px;
+  /* Zabrání horizontálnímu scrollování na mobilu */
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -53,6 +56,8 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 img {
@@ -772,7 +777,10 @@ ul {
     position: fixed;
     inset: 0;
     top: 56px;
-    background: rgba(236, 72, 153, 0.97);
+    /* Plně neprůhledné — obsah stránky nesmí prosvítat */
+    background: #EC4899;
+    opacity: 1;
+    z-index: 200;
     flex-direction: column;
     align-items: center;
     justify-content: center;
